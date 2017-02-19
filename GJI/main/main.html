@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<TITLE>PHP 테스트</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"
+	pageEncoding="UTF-8">
+
+<style type="text/css">
+.f_service, .f_type, .f_detail, .confirm {
+	float: left;
+}
+
+.f_service{
+	width:50%;
+}
+
+.f_type, .f_detail{
+	width:20%;
+}
+
+.admin {
+	float: right;
+}
+
+div {
+	border-style: none;
+	border-color: #000000;
+}
+
+body {
+	width: 90%;
+	margin: 0 auto;
+}
+</style>
+</HEAD>
+
+<BODY>
+	<div class="admin">
+		<FORM action="../admin/ad_main.php">
+			<button type="button" onclick="location.href='../admin/ad_main.php' ">관리자페이지</button>
+		</FORM>
+	</div>
+	<br>
+	<BR>
+
+
+	<FORM action="main_result.php" method="post">
+
+		<div class="f_service">
+			<!-- 서비스 입력창-->
+			서비스: <input type="text" name="f_service" value="" size="70"> 
+		</div>
+		<div class="f_type">
+			장애현상: <select name="f_type">
+				<option value="">전체</option>
+				<option value="접속장애">접속장애</option>
+				<option value="기능실행오류">기능실행오류</option>
+				<option value="이미지오류">이미지오류</option>
+				<option value="검색결과오류">검색결과오류</option>
+				<option value="기타">기타</option>
+			</select>
+		</div>
+		<div class="f_detail"> 
+			세부영역: <input type="text" name="f_detail" value=""> 
+			<input type="submit" value="확인">
+		</div>
+	</FORM>
+
+	<!--
+            <p>
+            <iframe width = "1200" height="700" 
+            src="result.php">
+            </iframe>	
+   
+            </p>
+            
+            </FORM>
+    -->
+
+
+
+</BODY>
+</HTML>
